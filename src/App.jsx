@@ -72,7 +72,14 @@ function App() {
         </section>
         <section id="contacts">
           <h2>Контакты</h2>
-          <p>Ссылка для вступления в <a href="https://t.me/+stDCZ9XGNAA2MmRi" target="_blank" rel="noopener noreferrer">Telegram</a>.</p>
+        <a
+    href="https://t.me/+stDCZ9XGNAA2MmRi"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="join-btn"
+  >
+    Ссылка для присоединения к семье
+  </a>
         </section>
       </main>
       <footer>
