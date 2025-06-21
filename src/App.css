@@ -1,0 +1,180 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body {
+  background: #181828;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.App-header {
+  background: #23234a;
+  padding: 32px 0 16px 0;
+  text-align: center;
+  box-shadow: 0 4px 24px #000a;
+}
+
+.logo {
+  width: 90px;
+  filter: drop-shadow(0 0 12px #00ffe7);
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  text-shadow: 0 0 8px #00ffe7, 0 0 2px #fff;
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #00ffe7;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #ffe600;
+  text-shadow: 0 0 8px #ffe600;
+}
+
+main {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: #23234a;
+  border-radius: 14px;
+  margin-bottom: 28px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 16px #0005;
+}
+
+h2 {
+  color: #ffe600;
+  text-shadow: 0 0 8px #ffe600;
+  margin-top: 0;
+}
+
+.members-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.member-card {
+  background: #181828;
+  border-radius: 10px;
+  padding: 12px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 1px #00ffe766;
+  width: 120px;
+}
+.role{
+  color: #00ffe7;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00ffe7, 0 0 2px #fff;
+  padding: 2px 0 0 0;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+.role-highlight {
+  color: #ffe600;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ffe600, 0 0 2px #fff;
+  border-bottom: 2px solid #ffe600;
+  padding: 2px 0 0 0;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+.member-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  border: 2px solid #00ffe7;
+  box-shadow: 0 0 8px #00ffe7;
+}
+
+.member-card span {
+  color: #fff;
+  font-weight: 500;
+}
+
+a {
+  color: #00ffe7;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #ffe600;
+}
+
+footer {
+  text-align: center;
+  padding: 18px 0;
+  background: #23234a;
+  color: #aaa;
+  font-size: 1rem;
+  margin-top: 32px;
+  box-shadow: 0 -2px 16px #0005;
+}
+@media (max-width: 600px) {
+  .App-header {
+    padding: 18px 0 10px 0;
+  }
+
+  .logo {
+    width: 60px;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  main {
+    padding: 0 4px;
+  }
+
+  section {
+    padding: 14px 6px;
+    margin-bottom: 18px;
+  }
+
+  .members-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .member-card {
+    min-width: 50vw;
+    max-width: 98vw;
+    padding: 10px 6px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+}
