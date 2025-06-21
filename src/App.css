@@ -229,7 +229,38 @@ footer {
   margin-top: 32px;
   box-shadow: 0 -2px 16px #0005;
 }
+@media (min-width: 601px) {
+  .member-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  .member-card:hover,
+  .member-card:focus {
+    transform: translateY(-8px) scale(1.07) rotate(-2deg);
+    box-shadow: 0 0 32px #00ffe7cc, 0 8px 32px #000a;
+    z-index: 2;
+  }
+}
+
 @media (max-width: 600px) {
+   .member-card {
+    min-width: 60vw;
+    max-width: 70vw;
+    width: 70vw;
+    padding: 8px 4px;
+    box-shadow: 0 0 10px #00ffe7cc;
+    cursor: default !important;
+    transition: none;
+  }
+  .member-card:hover,
+  .member-card:active,
+  .member-card:focus {
+    transform: none !important;
+    box-shadow: 0 0 16px #00ffe7cc !important;
+    z-index: 1 !important;
+    cursor: default !important;
+  }
+
   .App-header {
     padding: 18px 0 10px 0;
   }
@@ -404,6 +435,7 @@ footer {
 }
 
 @media (max-width: 600px) {
+  
   html, body, #root, .App {
     min-width: 100vw;
     width: 100vw;
