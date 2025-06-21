@@ -50,7 +50,7 @@ function App() {
             
           </ul>
         </section>
-        <section id="members">
+        <section id="members" data-aos="fade-up">
           <h2>Старший состав</h2>
           <div className="members-list">
      
@@ -94,9 +94,9 @@ function App() {
          
           </div>
         </section>
-        <section id="contacts">
-          <h2>Вступить в семью</h2>
-        <a
+       <section id="contacts" data-aos="fade-up">
+  <h2>Вступить в семью</h2>
+  <a
     href="https://t.me/+stDCZ9XGNAA2MmRi"
     target="_blank"
     rel="noopener noreferrer"
@@ -104,7 +104,7 @@ function App() {
   >
     Ссылка для присоединения к семье
   </a>
-        </section>
+</section>
       </main>
       <footer>
         <p>© 2025 FANDOM UA</p>
