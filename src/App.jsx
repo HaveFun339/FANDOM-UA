@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="/logo.png" alt="FANDOM UA Logo" className="logo" />
+        <img src="/logo.png" alt="" className="logo" />
         <h1>FANDOM UA</h1>
         <nav>
           <a href="#about">О семье</a>
