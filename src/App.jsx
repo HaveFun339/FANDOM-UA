@@ -31,38 +31,38 @@ function App() {
           <div className="members-list">
      
             <div className="member-card">
-              <img src="./public/roma-logo.jpg" alt="User1" />
+              <img src="/roma-logo.jpg" alt="User1" />
               <span className='role'>Roma_Yarmak</span>
               <div className="role-highlight">Глава</div>
 
             </div>
              <div className="member-card">
-              <img src="./public/dima-logo.jpg" alt="User1" />
+              <img src="/dima-logo.jpg" alt="User1" />
               <span className='role'>Dmitro_Minov</span>
               <div className="role-highlight">Авторитет</div>
 
             </div>
              <div className="member-card">
-              <img src="./public/yev-logo.jpg" alt="User1" />
+              <img src="/yev-logo.jpg" alt="User1" />
               <span className='role'>Evgeniy_Monein</span>
               <div className="role-highlight">Авторитет</div>
 
             </div>
             <div className="member-card">
-              <img src="./public/k-logo.jpg"></img>
+              <img src="/k-logo.jpg"></img>
               <span className='role'>Violetta_Kalinech</span>
               <div className="role-highlight">Авторитет</div>
 
             </div>
              <div className="member-card">
-              <img src="./public/egor-logo.jpg" alt="User1" />
+              <img src="/egor-logo.jpg" alt="User1" />
               <span className='role'>Egor_Mercuris</span>
               <div className="role-highlight">Положенец</div>
 
             </div>
              
              <div className="member-card">
-              <img src="./public/rk-logo.jpg" alt="User1" />
+              <img src="/rk-logo.jpg" alt="User1" />
               <span className='role'>Sasha_Blackwood</span>
               <div className="role-highlight">Положенец</div>
 
