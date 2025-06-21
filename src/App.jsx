@@ -12,6 +12,109 @@ import "aos/dist/aos.css";
 import Autopark from "./Autopark";
 import News from "./News";
 
+const translations = {
+  ru: {
+    rank: {
+      "Глава": "Глава",
+      "Авторитет": "Авторитет",
+      "Положенец": "Положенец",
+    },
+    about: "О семье",
+    aboutText: "FANDOM UA — дружная семья игроков на 18 сервере Grand Mobile. Мы ценим активность, взаимопомощь и весёлое общение!",
+    news: "Новости",
+    newsText: "Здесь вы можете найти самые свежие новости о нашей семье FANDOM UA!",
+    moreNews: "Больше новостей",
+    members: "Старший состав",
+    join: "Вступить в семью",
+    joinLink: "Ссылка для присоединения к семье",
+    main: "Главная",
+    cars: "Автопарк",
+    copyright: "© 2025 FANDOM UA",
+  },
+  uk: {
+     rank: {
+      "Глава": "Голова",
+      "Авторитет": "Авторитет",
+      "Положенец": "Положенець",
+    },
+    about: "Про сім'ю",
+    aboutText: "FANDOM UA — дружна сім'я гравців на 18 сервері Grand Mobile. Ми цінуємо активність, взаємодопомогу та веселе спілкування!",
+    news: "Новини",
+    newsText: "Тут ви знайдете найсвіжіші новини про нашу сім'ю FANDOM UA!",
+    moreNews: "Більше новин",
+    members: "Старший склад",
+    join: "Вступити в сім'ю",
+    joinLink: "Посилання для приєднання до сім'ї",
+    main: "Головна",
+    cars: "Автопарк",
+    copyright: "© 2025 FANDOM UA",
+  },
+  en: {
+    rank: {
+      "Глава": "Head",
+      "Авторитет": "Authority",
+      "Положенец": "Overseer",
+    },
+    about: "About the Family",
+    aboutText: "FANDOM UA is a friendly family of players on Grand Mobile server 18. We value activity, mutual help, and fun communication!",
+    news: "News",
+    newsText: "Here you can find the latest news about our FANDOM UA family!",
+    moreNews: "More news",
+    members: "Senior Members",
+    join: "Join the Family",
+    joinLink: "Link to join the family",
+    main: "Home",
+    cars: "Garage",
+    copyright: "© 2025 FANDOM UA",
+  },
+};
+
+const newsTranslations = {
+  ru: [
+    
+    {
+      date: "21.06.2025",
+      text: "Открылся официальный сайт семьи FANDOM UA! Теперь вы можете следить за всеми новостями и событиями в одном месте."
+    },
+    {
+      date: "18.06.2025",
+      text: "Глава семьи Roma_Yarmak продал семейный дом для покупки нового дома в Бусаево!"
+    },
+    {
+      date: "16.06.2025",
+      text: "Мы купили новый семейный дом в Южном! Теперь у нас есть уютное место для встреч и отдыха."
+    }
+  ],
+  uk: [
+    {
+      date: "21.06.2025",
+      text: "Відкрився офіційний сайт сім'ї FANDOM UA! Тепер ви можете слідкувати за всіма новинами та подіями в одному місці."
+    },
+    {
+      date: "18.06.2025",
+      text: "Голова сім'ї Roma_Yarmak продав сімейний будинок для покупки нового дому в Бусаєво!"
+    },
+    {
+      date: "16.06.2025",
+      text: "Ми купили новий сімейний будинок у Південному! Тепер у нас є затишне місце для зустрічей і відпочинку."
+    }
+  ],
+  en: [
+    {
+      date: "21.06.2025",
+      text: "The official FANDOM UA family website is open! Now you can follow all the news and events in one place."
+    },
+    {
+      date: "18.06.2025",
+      text: "Family head Roma_Yarmak sold the family house to buy a new one in Busaevo!"
+    },
+    {
+      date: "16.06.2025",
+      text: "We bought a new family house in Yuzhny! Now we have a cozy place for meetings and relaxation."
+    }
+  ]
+};
+
 function handleNavClick(e) {
   const href = e.target.getAttribute("href");
   if (href && href.startsWith("#")) {
@@ -59,18 +162,34 @@ const members = [
   },
 ];
 
-function Home() {
-  const [search, setSearch] = useState("");
+function LanguageModal({ onSelect }) {
+  return (
+    <div className="lang-modal">
+      <div className="lang-modal-bubbles">
+        <div className="lang-modal-bubble ru"></div>
+        <div className="lang-modal-bubble uk"></div>
+        <div className="lang-modal-bubble en"></div>
+      </div>
+      <div className="lang-modal-content">
+        <h2>Выберите язык / Оберіть мову / Choose language</h2>
+        <div className="lang-btns">
+          <button onClick={() => onSelect("ru")}>Русский</button>
+          <button onClick={() => onSelect("uk")}>Українська</button>
+          <button onClick={() => onSelect("en")}>English</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+function Home({ lang }) {
   const navigate = useNavigate();
+  const t = translations[lang];
 
   return (
     <main>
       <section id="about" data-aos="fade-up">
-        <h2>О семье</h2>
-        <p>
-          FANDOM UA — дружная семья игроков на 18 сервере Grand Mobile. Мы ценим
-          активность, взаимопомощь и весёлое общение!
-        </p>
+        <h2>{t.about}</h2>
+        <p>{t.aboutText}</p>
       </section>
       <section
         id="news"
@@ -78,11 +197,9 @@ function Home() {
         style={{ cursor: "pointer", color: "white" }}
         onClick={() => navigate("/news")}
       >
-        <h2>Новости</h2>
+        <h2>{t.news}</h2>
         <ul>
-          <li>
-            Здесь вы можете найти самые свежие новости о нашей семье FANDOM UA!
-          </li>
+          <li>{t.newsText}</li>
           <button
             className="more"
             onClick={e => {
@@ -90,36 +207,31 @@ function Home() {
               navigate("/news");
             }}
           >
-            Больше новостей
+            {t.moreNews}
           </button>
         </ul>
       </section>
       <section id="members" data-aos="fade-up">
-        <h2>Старший состав</h2>
-      
+        <h2>{t.members}</h2>
         <div className="members-list">
-          {members
-            .filter((m) =>
-              m.name.toLowerCase().includes(search.toLowerCase())
-            )
-            .map((m) => (
-              <div className="member-card" key={m.name}>
-                <img src={m.img} alt={m.name} />
-                <span className="role">{m.name}</span>
-                <div className="role-highlight">{m.role}</div>
-              </div>
-            ))}
+          {members.map((m) => (
+            <div className="member-card" key={m.name}>
+              <img src={m.img} alt={m.name} />
+              <span className="role">{m.name}</span>
+              <div className="role-highlight">{t.rank[m.role] || m.role}</div>
+            </div>
+          ))}
         </div>
       </section>
       <section id="contacts" data-aos="fade-up">
-        <h2>Вступить в семью</h2>
+        <h2>{t.join}</h2>
         <a
           href="https://t.me/+stDCZ9XGNAA2MmRi"
           target="_blank"
           rel="noopener noreferrer"
           className="join-btn"
         >
-          Ссылка для присоединения к семье
+          {t.joinLink}
         </a>
       </section>
     </main>
@@ -127,9 +239,18 @@ function Home() {
 }
 
 function App() {
+  const [lang, setLang] = useState(null);
+
   useEffect(() => {
     AOS.init({ duration: 800 });
   }, []);
+
+  if (!lang) {
+    return <LanguageModal onSelect={setLang} />;
+  }
+
+  const t = translations[lang];
+  const newsList = newsTranslations[lang];
 
   return (
     <Router>
@@ -155,19 +276,19 @@ function App() {
           </div>
           <nav>
             <Link to="/" onClick={handleNavClick}>
-              Главная
+              {t.main}
             </Link>
-            <Link to="/news">Новости</Link>
-            <Link to="/cars">Автопарк</Link>
+            <Link to="/news">{t.news}</Link>
+            <Link to="/cars">{t.cars}</Link>
           </nav>
         </header>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/cars" element={<Autopark />} />
+          <Route path="/" element={<Home lang={lang} />} />
+          <Route path="/news" element={<News lang={lang} newsList={newsList} t={t} />} />
+       <Route path="/cars" element={<Autopark lang={lang} />} />
         </Routes>
         <footer>
-          <p>© 2025 FANDOM UA</p>
+          <p>{t.copyright}</p>
         </footer>
       </div>
     </Router>
