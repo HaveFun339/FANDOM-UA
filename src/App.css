@@ -14,20 +14,38 @@ body {
   margin: 0;
   min-height: 100vh;
 }
-
+.head {
+  font-size: 2.5rem;
+  
+  text-shadow: 0 0 16px  0 0 2px  0 0 32px #8d01ff;
+  margin-bottom: 8px;
+  margin-top: 0;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
 .App-header {
   background: #23234a;
   padding: 32px 0 16px 0;
   text-align: center;
   box-shadow: 0 4px 24px #000a;
+  margin-bottom: 30px;
 }
 
 .logo {
-  width: 90px;
-  filter: drop-shadow(0 0 12px #00ffe7);
-  margin-bottom: 12px;
-}
+  width: 30px;
+  filter: drop-shadow(0 0 12px #FA005A);
+    margin-bottom: 0;
+  padding: 0;
 
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
 h1 {
   font-size: 2.2rem;
   color: #fff;
@@ -212,4 +230,115 @@ footer {
     font-size: 0.9rem;
     padding: 10px 0;
   }
+}
+@keyframes pulse {
+  0% { filter: drop-shadow(0 0 12px #FA005A); }
+  50% { filter: drop-shadow(0 0 32px #00ffe7); }
+  100% { filter: drop-shadow(0 0 12px #FA005A); }
+}
+.logo {
+  animation: pulse 2s infinite;
+}
+.member-card:hover {
+  transform: translateY(-8px) scale(1.07) rotate(-2deg);
+  box-shadow: 0 0 32px #00ffe7cc, 0 8px 32px #000a;
+}
+.bg-bubbles {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.bubble {
+  position: absolute;
+  bottom: -120px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #00ffe7 60%, #8d01ff 100%);
+  opacity: 0.25;
+  border-radius: 50%;
+  animation: bubbleUp 16s linear infinite;
+  filter: blur(1px) drop-shadow(0 0 32px #00ffe7);
+}
+.bubble:nth-child(2) { left: 20vw; width: 40px; height: 40px; animation-duration: 12s; animation-delay: 2s;}
+.bubble:nth-child(3) { left: 40vw; width: 80px; height: 80px; animation-duration: 18s; animation-delay: 4s;}
+.bubble:nth-child(4) { left: 60vw; width: 50px; height: 50px; animation-duration: 14s; animation-delay: 1s;}
+.bubble:nth-child(5) { left: 80vw; width: 70px; height: 70px; animation-duration: 20s; animation-delay: 3s;}
+.bubble:nth-child(6) { left: 10vw; width: 30px; height: 30px; animation-duration: 10s; animation-delay: 5s;}
+.bubble:nth-child(7) { left: 30vw; width: 90px; height: 90px; animation-duration: 22s; animation-delay: 6s;}
+.bubble:nth-child(8) { left: 50vw; width: 60px; height: 60px; animation-duration: 13s; animation-delay: 2s;}
+.bubble:nth-child(9) { left: 70vw; width: 40px; height: 40px; animation-duration: 17s; animation-delay: 7s;}
+.bubble:nth-child(10) { left: 90vw; width: 50px; height: 50px; animation-duration: 15s; animation-delay: 1s;}
+
+@keyframes bubbleUp {
+  0% { transform: translateY(0) scale(1);}
+  100% { transform: translateY(-110vh) scale(1.2);}
+}
+
+.App, .App-header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+.neon-line, .neon-line2 {
+  position: absolute;
+  width: 180vw;
+  height: 4px;
+  left: -40vw;
+  top: 30vh;
+  background: linear-gradient(90deg, #00ffe7 0%, #8d01ff 100%);
+  opacity: 0.13;
+  filter: blur(2px) drop-shadow(0 0 16px #00ffe7);
+  transform: rotate(-8deg);
+  animation: moveLine 12s linear infinite alternate;
+}
+.neon-line2 {
+  top: 70vh;
+  opacity: 0.09;
+  background: linear-gradient(90deg, #ffe600 0%, #8d01ff 100%);
+  animation-delay: 4s;
+  transform: rotate(6deg);
+}
+@keyframes moveLine {
+  0% { left: -40vw; }
+  100% { left: -10vw; }
+}
+
+
+.neon-spot, .neon-spot2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.12;
+  pointer-events: none;
+}
+.neon-spot {
+  width: 300px; height: 300px;
+  left: 10vw; top: 10vh;
+  background: #00ffe7;
+  animation: spotPulse 8s infinite alternate;
+}
+.neon-spot2 {
+  width: 220px; height: 220px;
+  right: 8vw; bottom: 12vh;
+  background: #ffe600;
+  animation: spotPulse 10s infinite alternate-reverse;
+}
+@keyframes spotPulse {
+  0% { opacity: 0.10; transform: scale(1);}
+  100% { opacity: 0.18; transform: scale(1.15);}
+}
+
+
+.wave {
+  position: absolute;
+  bottom: 0; left: 0; width: 100vw; height: 120px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.App, .App-header, main, footer {
+  position: relative;
+  z-index: 2;
 }
