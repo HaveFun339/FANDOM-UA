@@ -71,7 +71,7 @@ function App() {
           </div>
         </section>
         <section id="contacts">
-          <h2>Контакты</h2>
+          <h2>Вступить в семью</h2>
         <a
     href="https://t.me/+stDCZ9XGNAA2MmRi"
     target="_blank"
