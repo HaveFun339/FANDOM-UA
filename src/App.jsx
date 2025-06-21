@@ -61,6 +61,11 @@ function Home() {
             <span className='role'>Violetta_Kalinech</span>
             <div className="role-highlight">Авторитет</div>
           </div>
+            <div className="member-card">
+            <img src="/sliv-logo.jpg" alt="User1" />
+            <span className='role'>Sliva_Bebrov</span>
+            <div className="role-highlight">Авторитет</div>
+          </div>
           <div className="member-card">
             <img src="/egor-logo.jpg" alt="User1" />
             <span className='role'>Egor_Mercuris</span>
@@ -71,11 +76,7 @@ function Home() {
             <span className='role'>Sasha_Blackwood</span>
             <div className="role-highlight">Положенец</div>
           </div>
-            <div className="member-card">
-            <img src="/sliv-logo.jpg" alt="User1" />
-            <span className='role'>Sliva_Bebrov</span>
-            <div className="role-highlight">Авторитет</div>
-          </div>
+          
         </div>
       </section>
       <section id="contacts" data-aos="fade-up">
