@@ -150,11 +150,7 @@ const members = [
     name: "Sliva_Bebrov",
     role: "Авторитет",
   },
-  {
-    img: "/egor-logo.jpg",
-    name: "Egor_Mercuris",
-    role: "Положенец",
-  },
+
   {
     img: "/rk-logo.jpg",
     name: "Sasha_Blackwood",
