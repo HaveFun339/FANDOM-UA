@@ -16,6 +16,7 @@ const translations = {
   ru: {
     rank: {
       "Глава": "Глава",
+      "Зам.Главы": "Зам.Главы",
       "Авторитет": "Авторитет",
       "Положенец": "Положенец",
     },
@@ -32,8 +33,9 @@ const translations = {
     copyright: "© 2025 FANDOM UA",
   },
   uk: {
-     rank: {
+    rank: {
       "Глава": "Голова",
+      "Зам.Главы": "Заст. Голови",
       "Авторитет": "Авторитет",
       "Положенец": "Положенець",
     },
@@ -52,6 +54,7 @@ const translations = {
   en: {
     rank: {
       "Глава": "Head",
+      "Зам.Главы": "Deputy Head",
       "Авторитет": "Authority",
       "Положенец": "Overseer",
     },
@@ -71,7 +74,10 @@ const translations = {
 
 const newsTranslations = {
   ru: [
-    
+    {
+      date: "03.07.2025",
+      text: "Nesso_Nissan кинул в казну 27.5кк, скоро будет новый дом!"
+    },
     {
       date: "21.06.2025",
       text: "Открылся официальный сайт семьи FANDOM UA! Теперь вы можете следить за всеми новостями и событиями в одном месте."
@@ -87,6 +93,10 @@ const newsTranslations = {
   ],
   uk: [
     {
+      date: "03.07.2025",
+      text: "Nesso_Nissan поклав в казну 27.5кк, скоро буде новий будинок!"
+    },
+    {
       date: "21.06.2025",
       text: "Відкрився офіційний сайт сім'ї FANDOM UA! Тепер ви можете слідкувати за всіма новинами та подіями в одному місці."
     },
@@ -100,6 +110,10 @@ const newsTranslations = {
     }
   ],
   en: [
+    {
+      date: "03.07.2025",
+      text: "Nesso_Nissan threw 27.5kk into the treasury, a new house is coming soon!"
+    },
     {
       date: "21.06.2025",
       text: "The official FANDOM UA family website is open! Now you can follow all the news and events in one place."
@@ -141,16 +155,15 @@ const members = [
     role: "Авторитет",
   },
   {
-    img: "/k-logo.jpg",
-    name: "Violetta_Kalinech",
-    role: "Авторитет",
+    img: "/kinder.jpg",
+    name: "Nesso_Nissan",
+    role: "Зам.Главы",
   },
   {
     img: "/sliv-logo.jpg",
     name: "Sliva_Bebrov",
     role: "Авторитет",
   },
-
   {
     img: "/rk-logo.jpg",
     name: "Sasha_Blackwood",
@@ -177,6 +190,7 @@ function LanguageModal({ onSelect }) {
     </div>
   );
 }
+
 function Home({ lang }) {
   const navigate = useNavigate();
   const t = translations[lang];
@@ -280,8 +294,16 @@ function App() {
         </header>
         <Routes>
           <Route path="/" element={<Home lang={lang} />} />
-          <Route path="/news" element={<News lang={lang} newsList={newsList} t={t} />} />
-       <Route path="/cars" element={<Autopark lang={lang} />} />
+          <Route
+            path="/news"
+            element={
+              <News
+                t={t}
+                newsList={newsList}
+              />
+            }
+          />
+          <Route path="/cars" element={<Autopark lang={lang} />} />
         </Routes>
         <footer>
           <p>{t.copyright}</p>
@@ -290,5 +312,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

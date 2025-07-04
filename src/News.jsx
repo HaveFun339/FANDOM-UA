@@ -5,9 +5,11 @@ function News({ lang }) {
   const translations = {
     ru: {
       news: "Новости",
-      newsText: "Здесь вы можете найти самые свежие новости о нашей семье FANDOM UA!",
-      moreNews: "Больше новостей",
       newsList: [
+        {
+          date: "03.07.2025",
+          text: "Nesso_Nissan кинул в казну 27.5кк, скоро будет новый дом!"
+        },
         {
           date: "21.06.2025",
           text: "Открылся официальный сайт семьи FANDOM UA! Теперь вы можете следить за всеми новостями и событиями в одном месте."
@@ -24,9 +26,11 @@ function News({ lang }) {
     },
     uk: {
       news: "Новини",
-      newsText: "Тут ви знайдете найсвіжіші новини про нашу сім'ю FANDOM UA!",
-      moreNews: "Більше новин",
       newsList: [
+        {
+          date: "03.07.2025",
+          text: "Nesso_Nissan поклав в казну 27.5кк, скоро буде новий будинок!"
+        },
         {
           date: "21.06.2025",
           text: "Відкрився офіційний сайт сім'ї FANDOM UA! Тепер ви можете слідкувати за всіма новинами та подіями в одному місці."
@@ -43,9 +47,11 @@ function News({ lang }) {
     },
     en: {
       news: "News",
-      newsText: "Here you can find the latest news about our FANDOM UA family!",
-      moreNews: "More news",
       newsList: [
+        {
+          date: "03.07.2025",
+          text: "Nesso_Nissan threw 27.5kk into the treasury, a new house is coming soon!"
+        },
         {
           date: "21.06.2025",
           text: "The official FANDOM UA family website is open! Now you can follow all the news and events in one place."
