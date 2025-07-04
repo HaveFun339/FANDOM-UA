@@ -147,7 +147,7 @@ const members = [
   {
     img: "/dima-logo.jpg",
     name: "Dmitro_Minov",
-    role: "Авторитет",
+    role: "Зам.Главы",
   },
   {
     img: "/yev-logo.jpg",
