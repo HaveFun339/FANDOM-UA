@@ -15,15 +15,17 @@ import News from "./News";
 const translations = {
   ru: {
     rank: {
-      "Глава": "Глава",
+      Глава: "Глава",
       "Зам.Главы": "Зам.Главы",
-      "Авторитет": "Авторитет",
-      "Положенец": "Положенец",
+      Авторитет: "Авторитет",
+      Положенец: "Положенец",
     },
     about: "О семье",
-    aboutText: "FANDOM UA — дружная семья игроков на 18 сервере Grand Mobile. Мы ценим активность, взаимопомощь и весёлое общение!",
+    aboutText:
+      "FANDOM UA — дружная семья игроков на 18 сервере Grand Mobile. Мы ценим активность, взаимопомощь и весёлое общение!",
     news: "Новости",
-    newsText: "Здесь вы можете найти самые свежие новости о нашей семье FANDOM UA!",
+    newsText:
+      "Здесь вы можете найти самые свежие новости о нашей семье FANDOM UA!",
     moreNews: "Больше новостей",
     members: "Старший состав",
     join: "Вступить в семью",
@@ -34,13 +36,14 @@ const translations = {
   },
   uk: {
     rank: {
-      "Глава": "Голова",
+      Глава: "Голова",
       "Зам.Главы": "Заст. Голови",
-      "Авторитет": "Авторитет",
-      "Положенец": "Положенець",
+      Авторитет: "Авторитет",
+      Положенец: "Положенець",
     },
     about: "Про сім'ю",
-    aboutText: "FANDOM UA — дружна сім'я гравців на 18 сервері Grand Mobile. Ми цінуємо активність, взаємодопомогу та веселе спілкування!",
+    aboutText:
+      "FANDOM UA — дружна сім'я гравців на 18 сервері Grand Mobile. Ми цінуємо активність, взаємодопомогу та веселе спілкування!",
     news: "Новини",
     newsText: "Тут ви знайдете найсвіжіші новини про нашу сім'ю FANDOM UA!",
     moreNews: "Більше новин",
@@ -53,13 +56,14 @@ const translations = {
   },
   en: {
     rank: {
-      "Глава": "Head",
+      Глава: "Head",
       "Зам.Главы": "Deputy Head",
-      "Авторитет": "Authority",
-      "Положенец": "Overseer",
+      Авторитет: "Authority",
+      Положенец: "Overseer",
     },
     about: "About the Family",
-    aboutText: "FANDOM UA is a friendly family of players on Grand Mobile server 18. We value activity, mutual help, and fun communication!",
+    aboutText:
+      "FANDOM UA is a friendly family of players on Grand Mobile server 18. We value activity, mutual help, and fun communication!",
     news: "News",
     newsText: "Here you can find the latest news about our FANDOM UA family!",
     moreNews: "More news",
@@ -72,62 +76,29 @@ const translations = {
   },
 };
 
-const newsTranslations = {
-  ru: [
-    {
-      date: "03.07.2025",
-      text: "Nesso_Nissan кинул в казну 27.5кк, скоро будет новый дом!"
-    },
-    {
-      date: "21.06.2025",
-      text: "Открылся официальный сайт семьи FANDOM UA! Теперь вы можете следить за всеми новостями и событиями в одном месте."
-    },
-    {
-      date: "18.06.2025",
-      text: "Глава семьи Roma_Yarmak продал семейный дом для покупки нового дома в Бусаево!"
-    },
-    {
-      date: "16.06.2025",
-      text: "Мы купили новый семейный дом в Южном! Теперь у нас есть уютное место для встреч и отдыха."
-    }
-  ],
-  uk: [
-    {
-      date: "03.07.2025",
-      text: "Nesso_Nissan поклав в казну 27.5кк, скоро буде новий будинок!"
-    },
-    {
-      date: "21.06.2025",
-      text: "Відкрився офіційний сайт сім'ї FANDOM UA! Тепер ви можете слідкувати за всіма новинами та подіями в одному місці."
-    },
-    {
-      date: "18.06.2025",
-      text: "Голова сім'ї Roma_Yarmak продав сімейний будинок для покупки нового дому в Бусаєво!"
-    },
-    {
-      date: "16.06.2025",
-      text: "Ми купили новий сімейний будинок у Південному! Тепер у нас є затишне місце для зустрічей і відпочинку."
-    }
-  ],
-  en: [
-    {
-      date: "03.07.2025",
-      text: "Nesso_Nissan threw 27.5kk into the treasury, a new house is coming soon!"
-    },
-    {
-      date: "21.06.2025",
-      text: "The official FANDOM UA family website is open! Now you can follow all the news and events in one place."
-    },
-    {
-      date: "18.06.2025",
-      text: "Family head Roma_Yarmak sold the family house to buy a new one in Busaevo!"
-    },
-    {
-      date: "16.06.2025",
-      text: "We bought a new family house in Yuzhny! Now we have a cozy place for meetings and relaxation."
-    }
-  ]
-};
+const members = [
+  {
+    img: "/roma-logo (2).jpg",
+    name: "Roma_Yarmak",
+    role: "Глава",
+  },
+  {
+    img: "/dima-logo.jpg",
+    name: "Dmitro_Minov",
+    role: "Авторитет",
+  },
+
+  {
+    img: "/rk-logo.jpg",
+    name: "Nikita_Asker",
+    role: "Авторитет",
+  },
+  {
+    img: "/ns-logo.jpg",
+    name: "Leonid_Sokolov",
+    role: "Авторитет",
+  },
+];
 
 function handleNavClick(e) {
   const href = e.target.getAttribute("href");
@@ -137,39 +108,6 @@ function handleNavClick(e) {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   }
 }
-
-const members = [
-  {
-    img: "/roma-logo.jpg",
-    name: "Roma_Yarmak",
-    role: "Глава",
-  },
-  {
-    img: "/dima-logo.jpg",
-    name: "Dmitro_Minov",
-    role: "Зам.Главы",
-  },
-  {
-    img: "/yev-logo.jpg",
-    name: "Evgeniy_Monein",
-    role: "Авторитет",
-  },
-  {
-    img: "/kinder.jpg",
-    name: "Nesso_Nissan",
-    role: "Зам.Главы",
-  },
-  {
-    img: "/sliv-logo.jpg",
-    name: "Sliva_Bebrov",
-    role: "Авторитет",
-  },
-  {
-    img: "/rk-logo.jpg",
-    name: "Sasha_Blackwood",
-    role: "Положенец",
-  },
-];
 
 function LanguageModal({ onSelect }) {
   return (
@@ -212,7 +150,7 @@ function Home({ lang }) {
           <li>{t.newsText}</li>
           <button
             className="more"
-            onClick={e => {
+            onClick={(e) => {
               e.stopPropagation();
               navigate("/news");
             }}
@@ -259,9 +197,6 @@ function App() {
     return <LanguageModal onSelect={setLang} />;
   }
 
-  const t = translations[lang];
-  const newsList = newsTranslations[lang];
-
   return (
     <Router>
       <div className="App">
@@ -286,30 +221,23 @@ function App() {
           </div>
           <nav>
             <Link to="/" onClick={handleNavClick}>
-              {t.main}
+              {translations[lang].main}
             </Link>
-            <Link to="/news">{t.news}</Link>
-            <Link to="/cars">{t.cars}</Link>
+            <Link to="/news">{translations[lang].news}</Link>
+            <Link to="/cars">{translations[lang].cars}</Link>
           </nav>
         </header>
         <Routes>
           <Route path="/" element={<Home lang={lang} />} />
-          <Route
-            path="/news"
-            element={
-              <News
-                t={t}
-                newsList={newsList}
-              />
-            }
-          />
+          <Route path="/news" element={<News lang={lang} />} />
           <Route path="/cars" element={<Autopark lang={lang} />} />
         </Routes>
         <footer>
-          <p>{t.copyright}</p>
+          <p>{translations[lang].copyright}</p>
         </footer>
       </div>
     </Router>
   );
 }
+
 export default App;
