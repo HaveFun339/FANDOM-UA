@@ -78,7 +78,7 @@ const translations = {
 
 const members = [
   {
-    img: "/roma-logo (2).jpg",
+    img: "/rl-l.jpg",
     name: "Roma_Yarmak",
     role: "Глава",
   },
